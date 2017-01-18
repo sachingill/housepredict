@@ -5,8 +5,8 @@
 rm(list=ls())
 # 1. Read in the data
 library(readr)
-train<-read.csv("data/train.csv")
-test<-read.csv("data/test.csv")
+train<-read_csv("data/train.csv")
+test<-read_csv("data/test.csv")
 dim(train) # 1460 81
 dim(test) # 1460 80
 
