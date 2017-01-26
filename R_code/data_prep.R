@@ -9,7 +9,7 @@ library(readr)
 train<-read.csv("data/train.csv")
 test<-read.csv("data/test.csv")
 dim(train) # 1460 81
-dim(test) # 1460 80
+dim(test) # 1459 80
 
 # Data Preprocessing steps
 # Recoding variables with NA values that are actually data points as highlighted by
