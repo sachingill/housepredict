@@ -16,20 +16,20 @@ dim(test) # 1459 80
 # reference: http://stackoverflow.com/questions/19379081/how-to-replace-na-values-in-a-table-for-selected-columns-data-frame-data-tab
 
 # 2. Recoding the train data
-train[c("Alley")][is.na(train[c("Alley")])] <- "NoAlleyAccess"
-train[c("BsmtQual")][is.na(train[c("BsmtQual")])] <- "NoBasement"
-train[c("BsmtCond")][is.na(train[c("BsmtCond")])] <- "NoBasement"
-train[c("BsmtExposure")][is.na(train[c("BsmtExposure")])] <- "NoBasement"
-train[c("BsmtFinType1")][is.na(train[c("BsmtFinType1")])] <- "NoBasement"
-train[c("BsmtFinType2")][is.na(train[c("BsmtFinType2")])] <- "NoBasement"
-train[c("GarageType")][is.na(train[c("GarageType")])] <- "NoGarage"
-train[c("GarageFinish")][is.na(train[c("GarageFinish")])] <- "NoGarage"
-train[c("GarageQual")][is.na(train[c("GarageQual")])] <- "NoGarage"
-train[c("GarageCond")][is.na(train[c("GarageCond")])] <- "NoGarage"
-train[c("PoolQC")][is.na(train[c("PoolQC")])] <- "NoPool"
-train[c("Fence")][is.na(train[c("Fence")])] <- "NoFence"
-train[c("MiscFeature")][is.na(train[c("MiscFeature")])] <- "None"
-train[c("FireplaceQu")][is.na(train[c("FireplaceQu")])] <- "NoFireplace"
+train$Alley[is.na(train$Alley)] <- "NoAlleyAccess"
+train$BsmtQual[is.na(train$BsmtQual)] <- "NoBasement"
+train$BsmtCond[is.na(train$BsmtCond)] <- "NoBasement"
+train$BsmtExposure[is.na(train$BsmtExposure)] <- "NoBasement"
+train$BsmtFinType1[is.na(train$BsmtFinType1)] <- "NoBasement"
+train$BsmtFinType2[is.na(train$BsmtFinType2)] <- "NoBasement"
+train$GarageType[is.na(train$GarageType)] <- "NoGarage"
+train$GarageFinish[is.na(train$GarageFinish)] <- "NoGarage"
+train$GarageQual[is.na(train$GarageQual)] <- "NoGarage"
+train$GarageCond[is.na(train$GarageCond)] <- "NoGarage"
+train$PoolQC[is.na(train$PoolQC)] <- "NoPool"
+train$Fence[is.na(train$Fence)] <- "NoFence"
+train$MiscFeature[is.na(train$MiscFeature)] <- "None"
+train$FireplaceQu[is.na(train$FireplaceQu)] <- "NoFireplace"
 
 # 2.a Renaming the incorrectly labelled identifiers
 train$firstFloorSqft<-train$`1stFlrSF` # incorrect named identifier
