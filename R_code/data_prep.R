@@ -6,8 +6,8 @@
 rm(list=ls())
 # 1. Read in the data
 library(readr)
-train<-read.csv("data/train.csv")
-test<-read.csv("data/test.csv")
+train<-read.csv("data/train.csv", stringsAsFactors = FALSE)
+test<-read.csv("data/test.csv", stringsAsFactors = FALSE)
 dim(train) # 1460 81
 dim(test) # 1459 80
 
@@ -32,10 +32,10 @@ train$MiscFeature[is.na(train$MiscFeature)] <- "None"
 train$FireplaceQu[is.na(train$FireplaceQu)] <- "NoFireplace"
 
 # 2.a Renaming the incorrectly labelled identifiers
-train$firstFloorSqft<-train$`1stFlrSF` # incorrect named identifier
-train$secndFloorSqft<-train$`2ndFlrSF` # incorrect named identifier
-train$`1stFlrSF`<-NULL
-train$`2ndFlrSF`<-NULL
+train$firstFloorSqft<-train$X1stFlrSF # incorrect named identifier
+train$secndFloorSqft<-train$X2ndFlrSF # incorrect named identifier
+train$X1stFlrSF <-NULL
+train$X2ndFlrSF <-NULL
 sum(is.na(train)) # 357 missing
 #colSums(is.na(train)) # all categorical NA recoded accordingly as they were not missing according to the data dictionary
 
